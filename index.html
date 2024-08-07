@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content">
+      <label for="title" class="label">ToDoList</label>
+      <input type="text" id="title" class="header-input" placeholder="添加任务" />
+      <select id="subject" class="header-select">
+        <option value="math">数学</option>
+        <option value="chinese">语文</option>
+        <option value="english">英语</option>
+        <option value="physics">物理</option>
+        <option value="chemistry">化学</option>
+        <option value="history">历史</option>
+        <option value="politics">政治</option>
+      </select>
+    </div>
+  </header>
+  <section class="content">
+    <div class="title-container">
+      <h2 class="title">正在进行</h2>
+      <span id="todocount" class="count-badge">0</span>
+    </div>
+    <ol id="todolist" class="task-list"></ol>
+    <div class="title-container">
+      <h2 class="title">已经完成</h2>
+      <span id="donecount" class="count-badge">0</span>
+    </div>
+    <ul id="donelist" class="task-list done-list"></ul>
+  </section>
+  <footer class="footer">Copyright © 2024 <a href="#">wuming1679a</a></footer>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>任务详情</h2>
+      <textarea id="taskDetail" class="task-detail-textarea" rows="5"></textarea>
+      <button id="saveDetail" class="save-btn">保存</button>
+    </div>
+  </div>
+
+  <!-- The Due Date Modal -->
+  <div id="dueDateModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>修改规定的完成时间</h2>
+      <input type="datetime-local" id="dueDateInput" class="due-date-input">
+      <button id="saveDueDate" class="save-btn">保存</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
